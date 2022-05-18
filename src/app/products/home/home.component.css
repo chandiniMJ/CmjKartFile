@@ -1,0 +1,18 @@
+.example-card {
+     max-width: 600px;
+     margin-left: 20px; 
+    max-height: 500px; 
+  background-color: aliceblue;
+  color: black;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  div{
+      display: flex;
+
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }

@@ -1,0 +1,31 @@
+
+    <p>
+        <mat-toolbar class="col-12">
+         
+          <mat-icon>menu</mat-icon>
+       
+        <span>My App</span>
+        <span class="example-spacer"></span>
+          <button mat-raised-button color="primary" [matBadge]="totalnumber" matBadgePosition="before" matBadgeColor="accent" ><i class="fa fa-cart-plus" aria-hidden="true" routerLink="/products/cart"></i></button>
+      </mat-toolbar>
+      </p>
+
+<div class="row">
+    <div class="col-md-4 mb-2"*ngFor="let product of products">
+    <mat-card class="example-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.price}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="product.imgUrl" width="300px" height="200px" alt="no img">
+        <mat-card-content>
+          <p>{{product.discription}} </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="addcart(product)">Add Cart</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+</div>
